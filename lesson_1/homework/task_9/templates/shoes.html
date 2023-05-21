@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h2 class="container">Наши модели обуви:</h2>
+    <div class="catalog container">
+        <div>
+            <h3>Туфли</h3>
+            <a href="{{ url_for('index') }}"><img class="img" src="{{ url_for('static', filename='shoes1.png') }}"
+                                                  alt="Туфли"></a>
+        </div>
+        <div>
+            <h3>Кроссовки</h3>
+            <a href="{{ url_for('index') }}"><img class="img" src="{{ url_for('static', filename='shoes2.png') }}"
+                                                  alt="Кроссовки"></a>
+        </div>
+        <div>
+            <h3>Ботинки</h3>
+            <a href="{{ url_for('index') }}"><img class="img" src="{{ url_for('static', filename='shoes3.png') }}"
+                                                  alt="Ботинки"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

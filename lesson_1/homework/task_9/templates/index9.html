@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Каталог</h1>
+    <div class="menu">
+        <div>
+            <h2>Одежда</h2>
+            <a href="{{ url_for('clothes') }}"><img src="{{ url_for('static', filename='clothes.png') }}" alt="Одежда"></a>
+        </div>
+        <div>
+            <h2>Обувь</h2>
+            <a href="{{ url_for('shoes') }}"><img src="{{ url_for('static', filename='shoes.png') }}" alt="Обувь"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

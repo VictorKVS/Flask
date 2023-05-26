@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>It's FLASH time!</h1>
+<form action="{{url_for('flashed')}}" method="post">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <input type="text" name="name" placeholder="Имя">
+    <input type="submit" value="Отправить">
+</form>
+
+{% endblock %}

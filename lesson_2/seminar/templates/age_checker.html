@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Enter your name and age below</h1>
+<form action="{{url_for('check_age')}}" method="post">
+    <input type="text" name="username" placeholder="Name">
+    <input type="number" name="age" placeholder="age">
+    <input type="submit" value="Send">
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="cent">
+         {% if name %}
+            <h1>Привет, {{ name }}</h1>
+        <br>
+        {% endif %}
+        <img src="{{url_for('static', filename='images/kitten.png')}}" width="500px" alt="Kitten (=^_^=)"><br>
+    </div>
+{% endblock %}

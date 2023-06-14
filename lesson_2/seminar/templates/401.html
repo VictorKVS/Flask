@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<div>
+    <p><h1>Wrong login or password...</h1><br>
+    <a href="{{url_for('submit_get')}}">Try again
+    </a></p>
+</div>
+{% endblock %}

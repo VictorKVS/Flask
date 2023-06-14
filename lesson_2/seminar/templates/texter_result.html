@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{context.get('title')}}
+{% endblock %}
+
+{% block content %}
+<h2>Calculated!</h2>
+<p>In text >>{{context.get('text')}}<< there are {{context.get('result')}} words!</p>
+{% endblock %}

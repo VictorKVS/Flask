@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Enter two nums and choose an operation</h1>
+<form action="{{url_for('nums_calc')}}" method="post">
+    <input type="number" name="num1" placeholder="number 1">
+    <input type="number" name="num2" placeholder="number 2"><br><br>
+    <label><input type="radio" name="option" id="option1" value="Plus">Plus</label>
+    <label><input type="radio" name="option" id="option2" value="Minus">Minus</label>
+    <label><input type="radio" name="option" id="option3" value="Div">Division</label>
+    <label><input type="radio" name="option" id="option4" value="Mult">Mult</label>
+    <br><br>
+    <input type="submit" value="calculate">
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Enter any text to count words in it</h1>
+<form action="{{url_for('text_post')}}" method="post">
+    <textarea name="textarea" cols="30" rows="10" placeholder="Enter text here"></textarea>
+    <input type="submit" value="Calculate">
+</form>
+{% endblock %}

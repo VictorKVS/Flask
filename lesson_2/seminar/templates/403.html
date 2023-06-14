@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<div class="cent">
+    <h1>You are too young for this content.<br>Use another website option instead</h1>
+    <button><a href="{{url_for('index')}}">Back to main</a></button>
+</div>
+{% endblock %}

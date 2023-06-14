@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            Task 9
+        {% endblock %}
+    </title>
+    <style>
+        a {
+            text-decoration: none;
+            }
+        .img {
+            max-width: 600px;
+            max-height: 600px;
+        }
+        html,
+        body {
+          height: 100%;
+        }
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+
+        }
+        .nav {
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            font-size: 20px;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-around;
+            gap: 50px;
+            font-size: 20px;
+        }
+        .content {
+          flex: 1 0 auto;
+        }
+        .catalog {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        footer {
+            background-color: lightblue;
+            flex: 0 0 auto;
+        }
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+          }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div>
+            <ul class="nav">
+                <li><a href="{{ url_for('index') }}">Домашняя</a></li>
+                <li><a href="{{ url_for('clothes') }}">Одежда</a></li>
+                <li><a href="{{ url_for('shoes') }}">Обувь</a></li>
+            </ul>
+        </div>
+        {% block content %}
+            Page is unfilled
+        {% endblock %}
+    </div>
+    <hr>
+    <footer>
+        <p>All rights reserved (c)</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h2 class="container">Куртка</h2>
+    <div class="container">
+        <div>
+            <a href="{{ url_for('clothes') }}"><img class="img"
+                                                  src="{{ url_for('static', filename='jacket_unisex.png') }}"
+                                                  alt="Куртка"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

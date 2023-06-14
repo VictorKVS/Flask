@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h2>Our capital: Orgrimmar</h2>
+        <img src="{{ url_for('static', filename='orgrimmar.png') }}" alt="Our capital">
+        <p>After conquering Draenor, the Horde invaded the world of Azeroth through the Dark Portal
+            and waged war upon the world's native kingdoms, until Azeroth's nations united into an
+            Alliance of Lordaeron that managed to defeat the invaders and enslave most of the survivors.
+            Yet, the shamanistic tradition of the orcs managed to rekindle from the ashes as a young shaman
+            named Thrall arose to become warchief and lead his people in their darkest hour.
+            He reunited the clans into a new Horde and led the orcs out of the Eastern Kingdoms they had been
+            forced to invade and into the continent of Kalimdor, where the orcs finally freed themselves
+            from demonic corruption and briefly united with Azeroth's other races to stand against an invasion
+            of the Burning Legion. Seeking to begin a new existence on Kalimdor for themselves and
+            other newfound member races of the Horde, the orcs founded the nation of Durotar and the great city
+            of Orgrimmar.
+            As time passed, conflicts between the Alliance and Horde reemerged. During the Cataclysm,
+            Thrall passed leadership of the Horde to the reckless Garrosh Hellscream, whose actions plunged
+            the Horde into civil war. After being deposed, Hellscream traveled to an alternate Draenor
+            in the time before the original Horde's invasion of Azeroth. There, he rallied the orc clans
+            into an Iron Horde—free of demonic corruption but still bent on conquest—to invade the main
+            universe's Azeroth. History ultimately repeated itself as the Iron Horde succumbed to the
+            Burning Legion's will before being defeated by the forces of Azeroth, with the uncorrupted remnants
+            of the Iron Horde subsequently renaming themselves Mag'har. Years later, these uncorrupted orcs were
+            recruited into Azeroth's Horde and joined their main universe brethren.</p>
+    </div>
+{% endblock %}

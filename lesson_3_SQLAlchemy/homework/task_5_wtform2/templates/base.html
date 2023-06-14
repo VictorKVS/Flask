@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            Task 8
+        {% endblock %}
+    </title>
+    <style>
+        a {
+            text-decoration: none;
+            }
+        html,
+        body {
+          height: 100%;
+        }
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        .nav {
+            display: flex;
+            gap: 50px;
+            background-color: khaki;
+        }
+        .cent {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content {
+          flex: 1 0 auto;
+        }
+        footer {
+            background-color: khaki;
+            flex: 0 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content menu">
+        <ul class="nav">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('register') }}">Registration</a></li>
+        </ul>
+
+        {% block content %}
+            Page is unfilled
+        {% endblock %}
+    </div>
+    <hr>
+    <footer>
+        <p>All rights reserved (c)</p>
+    </footer>
+</div>
+</body>
+</html>

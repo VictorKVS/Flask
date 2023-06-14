@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+  <div>
+    {% for student in students %}
+      <p>
+        First name: {{student.first_name}} {{student.last_surname}}<br>
+        Email: {{student.email}}<br>
+        Group: {{student.group}}<br>
+        Marks:<br>
+        {% for grade in marks %}
+          {% if student.id == grade.student_id %}
+            {{grade.mark}}
+          {% endif %}
+        {% endfor %}
+        <hr>
+      </p>
+    {% endfor %}
+  </div>
+{% endblock %}
